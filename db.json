@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nom": "chleka",
+      "description": "chleka bousbo3",
+      "prix": 50
+    },
+    {
+      "id": 2,
+      "nom": "pc",
+      "description": "pc gamer",
+      "prix": 2500
+    },
+    {
+      "id": 3,
+      "nom": "souris",
+      "description": "souris razer",
+      "prix": 800
+    }
+  ]
+}

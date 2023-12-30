@@ -1,0 +1,8 @@
+ng new esmProjet
+ng serve -o
+ng g c /components/private/navbar
+ng g m /components/private/privateModules --routing
+ng g class /models/Product
+ng g service /services/Product
+
+json-server --watch db.json
