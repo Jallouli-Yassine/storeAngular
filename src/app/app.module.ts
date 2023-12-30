@@ -8,6 +8,7 @@ import { FooterComponent } from './components/public/footer/footer.component';
 import { HomeComponent } from './components/public/home/home.component';
 import { Page404Component } from './components/public/page404/page404.component';
 import { HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

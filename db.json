@@ -1,22 +1,16 @@
 {
   "products": [
     {
-      "id": 1,
-      "nom": "chleka",
-      "description": "chleka bousbo3",
-      "prix": 50
-    },
-    {
       "id": 2,
-      "nom": "pc",
-      "description": "pc gamer",
-      "prix": 2500
+      "nom": "ejjja",
+      "description": "kaskrout jaluoli",
+      "prix": 12000
     },
     {
-      "id": 3,
-      "nom": "souris",
-      "description": "souris razer",
-      "prix": 800
+      "nom": "lablebi",
+      "description": "hargmaa b ziiit w zouz adhaam",
+      "prix": 80,
+      "id": 4
     }
   ]
 }

@@ -9,6 +9,7 @@ import {ProductService} from "../../../../services/product.service";
 })
 export class StoreComponent implements OnInit{
 
+
   products:Product[]=[];
   constructor(private productService:ProductService) { }
 
@@ -18,7 +19,10 @@ export class StoreComponent implements OnInit{
   });
   }
 
-
+  delete(p: Product,i:number) {
+    this.productService.deleteProdcut(p).subscribe();
+    this.products.splice(i, 1);
+    }
 
 
 
