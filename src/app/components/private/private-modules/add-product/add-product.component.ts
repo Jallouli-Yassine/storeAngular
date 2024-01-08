@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
+import {FormArray, FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
 import {ProductService} from "../../../../services/product.service";
 import { Route, Router } from '@angular/router';
 
@@ -21,10 +21,10 @@ constructor(private fb: FormBuilder,private prodService:ProductService,private r
     ]),
     description: new FormControl('', Validators.required),
     prix: new FormControl(null, Validators.required),
-    /*
-    blocs: new FormArray([new FormControl('')]),
-    u: new FormControl('')
-*/
+
+    //plusZyeda: new FormArray([new FormControl('')]),
+    plusZyeda: new FormArray([]),
+
   }
 
 
@@ -37,8 +37,32 @@ constructor(private fb: FormBuilder,private prodService:ProductService,private r
   get prixProduct() { return this.addProductForm.get('prix'); }
 
 
+  get zyeda() {
+    return this.addProductForm.get('plusZyeda') as FormArray;
+  }
+/*
+  addZyeda() {
+    this.zyeda.push(new FormControl(''));
+  }
+*/
+  addZyeda() {
+    this.zyeda.push(new FormGroup({
+      nom: new FormControl('', Validators.required),
+      prix: new FormControl('', Validators.required)
+    }));
+  }
+
+  deleteZyeda() {
+    this.zyeda.removeAt(this.zyeda.length - 1);
+
+  }
+
   save() {
+
+
+
     if (this.addProductForm.valid) {
+      console.log(this.addProductForm.value);
       this.prodService.addNewProduct(this.addProductForm.value).subscribe(
         response => {
           console.log(response);

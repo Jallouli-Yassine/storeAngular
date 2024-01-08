@@ -1,5 +1,7 @@
 <h1>nom : {{product.nom}}</h1>
 <h1>prix : {{product.prix}}</h1>
+<h1>description : {{product.description}}</h1>
+<h1 *ngFor="let z of product.plusZyeda">zyeda : {{ z.nom }} || prix : {{ z.prix }}</h1>
 <button routerLink="img" class="btn btn-warning">see img</button>
 <button routerLink="/private-modules/productDetails/5" class="btn btn-danger">khabi img</button>
 

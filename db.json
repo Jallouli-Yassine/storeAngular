@@ -1,16 +1,55 @@
 {
   "products": [
     {
-      "id": 2,
-      "nom": "ejjja",
-      "description": "kaskrout jaluoli",
-      "prix": 12000
+      "nom": "nosDjeja",
+      "description": "nossdjeja bl frit w sauce kosksi",
+      "prix": 20,
+      "plusZyeda": [
+        "slata",
+        "frite2",
+        "chorba"
+      ],
+      "id": 6
     },
     {
-      "nom": "lablebi",
-      "description": "hargmaa b ziiit w zouz adhaam",
-      "prix": 80,
-      "id": 4
+      "nom": "pele",
+      "description": "hh",
+      "prix": 63,
+      "plusZyeda": [
+        {
+          "nom": "slata",
+          "prix": 11
+        },
+        {
+          "nom": "chorba",
+          "prix": 22
+        },
+        {
+          "nom": "3dham",
+          "prix": 5
+        }
+      ],
+      "id": 8
+    },
+    {
+      "nom": "pele",
+      "description": "testtesttest",
+      "prix": 3,
+      "plusZyeda": [
+        {
+          "nom": "slata",
+          "prix": 2
+        }
+      ],
+      "id": 9
+    },
+    {
+      "nom": "dehe",
+      "description": "rbooo djej bl frit w sauce chweya kamouneya w beraa",
+      "prix": 3,
+      "plusZyeda": [],
+      "id": 10
     }
-  ]
+  ],
+  "Cart": []
 }

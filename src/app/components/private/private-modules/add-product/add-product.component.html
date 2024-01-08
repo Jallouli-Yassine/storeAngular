@@ -36,17 +36,37 @@
         </div>
 
 
+<!--
 
-        <!--
-                <div formArrayName="competences">
-                  <h2>Compétences</h2>
-                  <button (click)="addCompetence()" type="button">+++</button>
-                  <div *ngFor="let competence of competences.controls; let i=index">
-                    <label for="competence-{{ i }}">Competence {{i+1}} : </label>
-                    <input id="competence-{{ i }}" type="text" [formControlName]="i">
+                <div formArrayName="plusZyeda">
+                  <h2>chneya maaah zyyeda ?</h2>
+                  <button (click)="addZyeda()" class="btn btn-warning" type="button">+++</button>
+                  <div *ngFor="let competence of zyeda.controls; let i=index">
+                    <label for="competence-{{ i }}">Zyedaa {{i+1}} : </label>
+                    <input class="bg-blue-100 mb-3" id="competence-{{ i }}" type="text" [formControlName]="i">
                   </div>
                 </div>
-        -->
+-->
+        <div formArrayName="plusZyeda">
+          <h2>chneya maaah zyyeda ?</h2>
+
+          <button (click)="addZyeda()" class="btn btn-outline-warning mr-5 mt-3" type="button">+++</button>
+          <button (click)="deleteZyeda()" class="btn btn-outline-danger  mt-3" type="button">---</button>
+
+          <div *ngFor="let item of zyeda.controls; let i = index" [formGroupName]="i">
+            <div>
+              <label for="nom{{i}}">Nom Zyedaa {{i+1}} : </label>
+              <input class="bg-blue-100 mb-1" type="text" id="nom{{i}}" formControlName="nom">
+            </div>
+
+            <div>
+              <label for="prix{{i}}">Prix Zyedaa {{i+1}} : </label>
+              <input class="bg-blue-100 mb-3" type="number" id="prix{{i}}" formControlName="prix">
+            </div>
+          </div>
+        </div>
+
+
 
         <!--
      [disabled]="addUserForm.invalid"
